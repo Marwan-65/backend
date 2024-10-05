@@ -10,7 +10,7 @@ const url = 'mongodb+srv://abdallahahmadaref:xmcdf4rw36GsOmvb@clustertexteditor.
 const client = new MongoClient(url);
 
 app.use(cors({
-  origin: 'http://localhost:5173' // Your frontend URL
+  origin: 'https://frontendnasa.vercel.app/'
 }));
 
 app.use(express.json());
@@ -88,6 +88,4 @@ app.get('/data', async (req, res) => {
   res.json(documents);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+module.exports = app;
